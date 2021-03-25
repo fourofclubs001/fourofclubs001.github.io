@@ -1,0 +1,33 @@
+.block {
+
+	height: 100px;
+	width: 100px;
+
+	margin: 10px;
+	padding: 10px;
+
+	background-color: grey;
+
+	color: white;
+	font-size: 20px;
+	text-align: center;
+
+	border: solid 5px black;
+	border-radius: 5px;
+
+}
+
+.blockList {
+
+	flex: 0 0 auto;
+	background-color: blue;
+
+}
+
+body {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+}

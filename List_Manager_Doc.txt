@@ -1,0 +1,54 @@
+pickUpList:
+- parent of pickUp blocks
+- class: "blockList"
+- id: "pickUpList" (unique element)
+
+pickUp block:
+- class: "pickUp" and "block"
+- must have id
+- draggable = "true" 
+- ondragstart = "handleDragStartPickUp(event)"
+
+block List:
+- parent of blocks
+- save order by key on the listManager.order_dict
+- have admission list with admitted block classes
+- class: "blockList"
+- must have id
+- ondragenter = "listManager.handleDragEnterList(event)"
+- ondragover = "listManager.handleDragOverList(event)"
+- ondragleave = "listManager.handleDragLeaveList(event)"
+- ondrop = "listManager.handleDropList(event)"
+
+block:
+- class: "block"
+- key: unique in block list
+- draggable = "true"
+- ondragstart = "listManager.handleDragStartList(event)"
+- ondrag = "listManager.handleDragList(event)"
+- ondragend = "listManager.handleDragEndList(event)"
+
+"handleDragStartPickUp(event)": 
+- send pickUp element id by data transfer
+
+"listManager.handleDragEnterList(event)":
+- display display "drop here" transparency
+
+"listManager.handleDragOverList(event)": 
+- prevent default for pickUp blocks
+
+"listManager.handleDragLeaveList(event)":
+- stop display "drop here" transparency
+
+"listManager.handleDropList(event)":
+- append new block to the list with the pickUp block children in it
+- stop display "drop here" transparency
+
+"listManager.handleDragStartList(event)":
+- display block with transparency
+
+"listManager.handleDragList(event)":
+- move the dragged block in the list
+
+"listManager.handleDragEndList(event)":
+- stop display block with transparency

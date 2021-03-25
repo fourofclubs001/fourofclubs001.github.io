@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CV-Try</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id = "pickUpList" class="blockList">
+		<div id = "block4" class="block pickUp block4" draggable="true" ondragstart="handleDragStartPickUp(event)">
+			4
+		</div>
+		<div id = "block5" class="block pickUp block5" draggable="true" ondragstart="handleDragStartPickUp(event)">
+		 	5
+		 </div>
+	</div>
+	<div id="list1" class="blockList"
+		 ondragenter="listManager.handleDragEnterList(event)" 
+	     ondragover = "listManager.handleDragOverList(event)"
+	     ondragleave="listManager.handleDragLeaveList(event)" 
+		 ondrop = "listManager.handleDropList(event)">
+		<div class="block" draggable="true" key="1" 
+			 ondragstart="listManager.handleDragStartList(event)" 
+			 ondrag="listManager.handleDragList(event)" 
+			 ondragend="listManager.handleDragEndList(event)">
+			1
+		</div>
+		<div class="block" draggable="true" key="2"
+		 	 ondragstart="listManager.handleDragStartList(event)" 
+		 	 ondrag="listManager.handleDragList(event)" 
+		 	 ondragend="listManager.handleDragEndList(event)">
+		 	2
+		 </div>
+		<div class="block" draggable="true" key="3" 
+			 ondragstart="listManager.handleDragStartList(event)" 
+			 ondrag="listManager.handleDragList(event)" 
+			 ondragend="listManager.handleDragEndList(event)">
+			3
+		</div>
+	</div>
+	<div id = "list2" class="blockList" 
+         ondragenter="listManager.handleDragEnterList(event)" 
+	     ondragover = "listManager.handleDragOverList(event)"
+	     ondragleave="listManager.handleDragLeaveList(event)" 
+		 ondrop = "listManager.handleDropList(event)">
+		<div class="block" draggable="true" key="1" 
+			 ondragstart="listManager.handleDragStartList(event)" 
+			 ondrag="listManager.handleDragList(event)" 
+			 ondragend="listManager.handleDragEndList(event)">
+			1
+		</div>
+		<div class="block" draggable="true" key="2"
+		 	 ondragstart="listManager.handleDragStartList(event)" 
+		 	 ondrag="listManager.handleDragList(event)" 
+		 	 ondragend="listManager.handleDragEndList(event)">
+		 	2
+		 </div>
+		<div class="block" draggable="true" key="3" 
+			 ondragstart="listManager.handleDragStartList(event)" 
+			 ondrag="listManager.handleDragList(event)" 
+			 ondragend="listManager.handleDragEndList(event)">
+			3
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
